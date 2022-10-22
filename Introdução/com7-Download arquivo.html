@@ -1,0 +1,32 @@
+<h1>Calcule e informe o tempo aproximado de download</h1>
+
+
+<hr>
+<form id="formulario">
+	<p> Qual o tamanho do arquivo, em MB? </p>
+	<input type="text" id="arquivo">
+	<p> Qual a velocidade da sua internet, em Mbps? </p>
+	<input type="text" id="velocidade">
+	<p></p>
+	<input type="submit">
+</form>
+
+<h2 id="tempo"></h2>
+
+<script type="text/javascript">
+
+	var form = document.getElementById('formulario');
+	var arq = document.getElementById(
+		'arquivo');
+	var vel = document.getElementById(
+		'velocidade');
+	var total = document.getElementById('tempo');
+	
+	form.addEventListener('submit',function(e){
+		total.innerText="O tempo de download é, aproximadamente: "+parseInt(((vel.value)*8)/parseInt(arq.value))+" minutos";
+		
+		e.preventDefault();
+	});
+
+
+</script>

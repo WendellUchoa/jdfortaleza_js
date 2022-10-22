@@ -1,0 +1,23 @@
+<h1>"O número informado foi [número]</h1>
+
+<hr>
+<form id="formulario">
+	<label for="numero">Informe um numero:</label>
+	<input type="text" id="numero">
+	<input type="submit">
+</form>
+
+<h2 id="informado"></h2>
+
+<script type="text/javascript">
+	var form = document.getElementById('formulario');
+	var numb = document.getElementById(
+		'numero');
+	var infor = document.getElementById('informado');
+
+	form.addEventListener('submit',function(e){
+		infor.innerText="O número informado foi: "+numb.value;
+
+		e.preventDefault();
+	});
+</script>

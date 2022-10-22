@@ -1,0 +1,29 @@
+<h1>Calcule e mostre o total do seu salário no mês</h1>
+
+
+<hr>
+<form id="formulario">
+	<input type="text" id="salario" placeholder="Salario por hora">
+	<input type="number" id="horasmes" placeholder="Horas trabalhadas">
+	<input type="submit">
+</form>
+
+<h2 id="custo"></h2>
+
+<script type="text/javascript">
+
+	var form = document.getElementById('formulario');
+	var sal = document.getElementById(
+		'salario');
+	var mes = document.getElementById(
+		'horasmes');
+	var total = document.getElementById('custo');
+	
+	form.addEventListener('submit',function(e){
+		total.innerText="O salário do mês foi: "+parseInt(sal.value)*parseInt(mes.value);
+		
+		e.preventDefault();
+	});
+
+
+</script>

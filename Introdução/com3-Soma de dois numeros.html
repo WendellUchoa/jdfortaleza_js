@@ -1,0 +1,31 @@
+<h1>Faça um Programa que peça dois números e imprima a soma</h1>
+
+
+<hr>
+<form id="formulario">
+	<input type="text" id="numero1" placeholder="Digite um numero">
+	<input type="text" id="numero2" placeholder="Digite um segundo numero">
+	<input type="submit">
+</form>
+
+<h2 id="adi"></h2>
+
+<script type="text/javascript">
+
+	var form = document.getElementById('formulario');
+	var numero1 = document.getElementById(
+		'numero1');
+	var numero2 = document.getElementById(
+		'numero2');
+	var soma = document.getElementById('adi');
+	
+	form.addEventListener('submit',function(e){
+		soma.innerText=parseInt(numero1.value)+parseInt(numero2.value);
+		
+		e.preventDefault();
+	});
+
+
+
+
+</script>

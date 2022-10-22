@@ -1,0 +1,27 @@
+<h1>"Boa noite, [nome]"</h1>
+
+<hr>
+<form id="formulario">
+	<p> Insira seu nome: </p>
+	<input type="text" id="nome">
+	<input type="submit">
+</form>
+
+<h2 id="boa"></h2>
+
+<script type="text/javascript">
+	var form = document.getElementById('formulario');
+	var name = document.getElementById(
+		'nome');
+	var noite = document.getElementById('boa');
+
+	form.addEventListener('submit',function(e){
+		noite.innerText="boa noite, "+nome.value;
+
+		e.preventDefault();
+	});
+
+
+
+
+</script>
