@@ -1,2 +1,2 @@
 # jdfortaleza_js
-Exerciocios do juventude digital
+Exercicios do juventude digital
