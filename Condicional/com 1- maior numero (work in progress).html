@@ -1,0 +1,33 @@
+<h1>Maior Número</h1>
+
+<form id="formulario">
+	<input type="text" id="n1" placeholder="informe um número">
+	<p></p>
+	<input type="text" id="n2" placeholder="informe um número">
+	<p></p>
+	<input type="submit">
+</form>
+
+<h2 id="resultado"></h2>
+
+<script type="text/javascript">
+
+	var form = document.getElementById('formulario');
+	var numero1 = document.getElementById('n1').value;
+	var numero2 = document.getElementById('n2').value;
+	var total = document.getElementById('resultado');
+
+	if (numero1>numero2) {
+	form.addEventListener('submit',function(e){
+		total.innerText="O maior número é: "+numero1
+
+		e.preventDefault();
+	});
+} else {
+	form.addEventListener('submit',function(e){
+		total.innerText="O maior número é: "+numero2
+
+		e.preventDefault();
+	});
+}
+</script>
