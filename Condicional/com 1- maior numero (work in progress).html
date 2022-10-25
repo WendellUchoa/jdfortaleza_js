@@ -13,21 +13,18 @@
 <script type="text/javascript">
 
 	var form = document.getElementById('formulario');
-	var numero1 = document.getElementById('n1').value;
-	var numero2 = document.getElementById('n2').value;
+	var numero1 = document.getElementById('n1');
+	var numero2 = document.getElementById('n2');
 	var total = document.getElementById('resultado');
 
-	if (numero1>numero2) {
-	form.addEventListener('submit',function(e){
-		total.innerText="O maior número é: "+numero1
-
+	form.addEventListener('submit',function(e){ 
+		if (numero1.value>numero2.value) {
+			total.innerText="O maior número é: "+numero1.value
+		}else{
+			total.innerText="O maior número é: "+numero2.value
+		}
 		e.preventDefault();
 	});
-} else {
-	form.addEventListener('submit',function(e){
-		total.innerText="O maior número é: "+numero2
+	
 
-		e.preventDefault();
-	});
-}
 </script>
