@@ -1,0 +1,30 @@
+<h1>Maior Número</h1>
+
+<form id="formulario">
+	<input type="text" id="n1" placeholder="informe um número">
+	<input type="submit">
+</form>
+
+<h2 id="resultado"></h2>
+
+<script type="text/javascript">
+
+	var form = document.getElementById('formulario');
+	var numero = document.getElementById('n1');
+	var total = document.getElementById('resultado');
+
+	form.addEventListener('submit',function(e){ 
+		if (numero.value>=1) {
+			total.innerText="o número "+numero.value+" é positivo";
+		} else if (numero.value==0) {
+			total.innerText="o número "+numero.value+" é neutro";
+		} else if (numero.value<0) {
+			total.innerText="o número "+numero.value+" é negativo";
+		} else {
+			total.innerText="Valor Inválido";
+		}
+		e.preventDefault();
+	});
+	
+
+</script>
